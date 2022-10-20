@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Movie Name</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+
+        }
+
+        #head {
+            position: fixed;
+            display: grid;
+            color: red;
+            border: 2px solid white;
+            grid-template-columns: 100px 300px 100px;
+            padding: 17px 10px;
+            width: 100%;
+            background-color: black;
+            z-index: -1;
+            opacity: .7;
+        }
+
+        .login {
+            position: relative;
+            left: 1032px;
+            top:12px;
+            background-color: black;
+            color: aliceblue;
+
+
+            text-decoration: none;
+        }
+        .login:hover{
+            color:gray;
+        }
+
+        .search {
+            height: 34px;
+            width: 275px;
+            position: relative;
+            left: 466px;
+            border-radius: 50px;
+            padding: 1px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="head">
+            <i>menu</i>
+            <input type="text" placeholder="Search" class="search">
+            <a href="../login.html" class="login">Login</a>
+        </div>
+    </header>
+
+</body>
+
+</html>
