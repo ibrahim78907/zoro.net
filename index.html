@@ -5,64 +5,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/72893fdb7a.js" crossorigin="anonymous"></script>
     <title>Zoro Movies</title>
 
     <style>
         /* Media Queries */
-        
-        @media only screen and (max-width: 526px){
-            *{
-            margin: 0;
-            padding: 0;
+
+        @media only screen and (max-width: 770px) {
+            * {
+                margin: 0;
+                padding: 0;
+
+            }
+
+            #head-1 {
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                /* display: none; */
+                /* opacity: 0; */
+
+            }
+
+            #homebutton {
+                /* opacity: 0; */
+
+            }
+
+            #burger {
+                display: block;
+
+
+            }
+
+
+            .nav-list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .search {
+                /* opacity: 0; */
+            }
+
+            .h-nav {
+                height: 72px;
+                background-color: black;
+                border-bottom:3px solid red ;
+            }
+
+            .v-nav {
+                opacity: 0;
+            }
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
-            #head-1{
-            display:flex;
-            padding: 0;
-
-            
-         }
-         #homebutton{
-            padding: 0;
-            margin: 7px ;
-            font: smaller;
-        }
-        #contain{
-            margin: 0;
-            padding: 0;
-            display: flex;
-            width: 180px;
-        }
-        .h1{
-            display: flex;
-            text-align: center;
-            justify-content: center;
-        }
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-    @media (min-width:300px) and (max-width:500px)  {
-         #box-2 {
-            display:block;
-            background-color: blanchedalmond;
-         }
-    }
-    @media (min-width:500px ) and (max-width:800px){
-         #box-3 {
-            display:block;
-            background-color: blue;
-         }
-    }
 
 
 
@@ -75,15 +90,14 @@
 
 
 
-
-
-
+        /* Media Queries end */
 
         body {
-            background-image: url(https://media.discordapp.net/attachments/1030728998772289609/1031762670900236348/wp2382500-roronoa-zoro-hd-wallpapers.jpg?width=1043&height=586);
+            /* background-image: url(https://media.discordapp.net/attachments/1030728998772289609/1031762670900236348/wp2382500-roronoa-zoro-hd-wallpapers.jpg?width=1043&height=586);
             background-repeat: no-repeat;
             background-position: cover;
-            background-size: cover;
+            background-size: cover; */
+            background-color: gray;
         }
 
         * {
@@ -92,15 +106,78 @@
         }
 
         /* Home start */
+        .search {
+            display: flex;
+            justify-content: left;
+            position: relative;
+
+        }
+
+        .input-1 {
+            margin: 0px 3px;
+            padding: 3px;
+            border: 2px solid rgb(249, 220, 220);
+            border-radius: 10px;
+        }
+
+        .search-btn {
+            border-radius: 10px;
+            padding: 3px;
+        }
+
+        .burger {
+
+            position: absolute;
+            cursor: pointer;
+            right: 5%;
+            top: 15px;
+            display: none;
+
+
+        }
+
+        .line {
+            width: 33px;
+            background-color: white;
+            height: 4px;
+            margin: 5px 3px;
+            border-radius: 4px;
+        }
+
+
+
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 25px;
+            margin-right: 9px;
+            cursor: pointer;
+            display: none;
+        }
+
+
+
+
+
+
+
+
+
+
+
         .head {
             display: flex;
             list-style-type: none;
-            background-color: gray;
+           background-color: gray;
+            align-items: center;
+            /* justify-content: center; */
+
         }
 
         .homebutton {
-            padding: 3px 15px;
-            margin: 10px;
+            padding: 5px 15px;
+            margin: 11px;
             font-size: 20px;
             text-decoration: none;
         }
@@ -115,23 +192,31 @@
             text-decoration: none;
         }
 
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+
         /* home end */
 
         .h1 {
             margin: 10px 2px;
-            display: inline;
             position: relative;
-            left: 20px;
-            color: beige;
+            border-top: 2px solid white;
+            
         }
 
         /* latest movies start */
-        
-         .yoyo{
-            width: 183px;
-            height: 276px;
+
+
+
+
+        .yoyo {
+            width: 168px;
+            height: 252px;
 
         }
+
         .home {
             display: flex;
             flex-wrap: wrap;
@@ -143,7 +228,7 @@
         .contain {
             background-position: cover;
             border: 2px solid darkslategray;
-            width: 182px;
+            width: 168px;
             height: 334px;
             list-style-type: none;
             margin: 4px 1px;
@@ -200,20 +285,33 @@
 </head>
 
 <body>
-    <nav class="navber">
+    <nav class="navber  h-nav" id="h-nav">
         <div class="head" id="head-1">
 
-            <li class="homebutton" id="homebutton"><a href="index.html" onclick="window.open('index.html', '_self')"
-                    class="num">Home</a></li>
-            <li class="homebutton" id="homebutton"><a href="movies1.html" onclick="window.open('index.html', '_self')"
-                    class="num">Movies</a></li>
-            <li class="homebutton" id="homebutton"><a href="index.html" onclick="window.open('index.html', '_self')"
-                    class="num">Series</a></li>
-            <li class="homebutton" id="homebutton"><a href="index.html" onclick="window.open('index.html', '_self')" class="num">Most
-                    Popular Movies</a></li>
-            <li class="homebutton" id="homebutton"><a href="index.html" onclick="window.open('index.html', '_self')" class="num">Hindi
-                    Dubbed</a></li>
+            <ul class="nav-list v-nav">
+                <li class="homebutton" id="homebutton"><a href="index.html" onclick="window.open('index.html', '_self')"
+                        class="num">Home</a></li>
+                <li class="homebutton" id="homebutton"><a href="movies1.html"
+                        onclick="window.open('index.html', '_self')" class="num">Movies</a></li>
+                <li class="homebutton" id="homebutton"><a href="index.html" onclick="window.open('index.html', '_self')"
+                        class="num">Series</a></li>
+                <li class="homebutton" id="homebutton"><a href="index.html" onclick="window.open('index.html', '_self')"
+                        class="num">Most
+                        Popular Movies</a></li>
+                <li class="homebutton" id="homebutton"><a href="index.html" onclick="window.open('index.html', '_self')"
+                        class="num">Hindi
+                        Dubbed</a></li>
+            </ul>
+            <div class="search v-nav">
+                <input type="search" name="search" placeholder="Search Your Movie" class="input-1">
+                <button class="search-btn">search</button>
+            </div>
 
+        </div>
+        <div class="burger" id="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
     </nav>
     <h1 class="h1" id="h1">
@@ -221,19 +319,20 @@
     </h1>
     <section class="home">
 
-         <li class="contain" id="contain">
+        <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="https://thefileslocker.net/womtcbzmhbp6.html" onclick="window.open('//thefileslocker.net/womtcbzmhbp6.html', '_self')">
-                <img  class="yoyo"
-                        src="https://media.discordapp.net/attachments/1030728998772289609/1040509258300670033/e75a1f25fd93642ca32e90b66b09a945.jpg";
-                        alt="This is an image"></a>
+                <a href="https://thefileslocker.net/womtcbzmhbp6.html"
+                    onclick="window.open('thefileslocker.net/womtcbzmhbp6.html', '_self')">
+                    <img class="yoyo"
+                        src="https://media.discordapp.net/attachments/1030728998772289609/1040509258300670033/e75a1f25fd93642ca32e90b66b09a945.jpg"
+                        ; alt="This is an image"></a>
 
                 <h1 id="h1">Devil's Workshop</h1>
                 <div id="list">
 
                     <ul>
                         <li class="list1" id="list1">Hd 2022</li>
-                        <li class="list1">Min 85</li>
+                        <li class="list1">Min 120</li>
                     </ul>
 
                 </div>
@@ -241,7 +340,109 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
+                        src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
+                        alt="This is an image"></a>
+
+                <h1 id="h1">The Lost City</h1>
+                <div id="list">
+
+                    <ul>
+                        <li class="list1" id="list1">Hd 2022</li>
+                        <li class="list1">Min 120</li>
+                    </ul>
+
+                </div>
+            </div>
+        </li>
+        <li class="contain" id="contain">
+            <div class="con" id="bo2">
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
+                        src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
+                        alt="This is an image"></a>
+
+                <h1 id="h1">The Lost City</h1>
+                <div id="list">
+
+                    <ul>
+                        <li class="list1" id="list1">Hd 2022</li>
+                        <li class="list1">Min 120</li>
+                    </ul>
+
+                </div>
+            </div>
+        </li>
+        <li class="contain" id="contain">
+            <div class="con" id="bo2">
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
+                        src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
+                        alt="This is an image"></a>
+
+                <h1 id="h1">The Lost City</h1>
+                <div id="list">
+
+                    <ul>
+                        <li class="list1" id="list1">Hd 2022</li>
+                        <li class="list1">Min 120</li>
+                    </ul>
+
+                </div>
+            </div>
+        </li>
+        <li class="contain" id="contain">
+            <div class="con" id="bo2">
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
+                        src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
+                        alt="This is an image"></a>
+
+                <h1 id="h1">The Lost City</h1>
+                <div id="list">
+
+                    <ul>
+                        <li class="list1" id="list1">Hd 2022</li>
+                        <li class="list1">Min 120</li>
+                    </ul>
+
+                </div>
+            </div>
+        </li>
+        <li class="contain" id="contain">
+            <div class="con" id="bo2">
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
+                        src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
+                        alt="This is an image"></a>
+
+                <h1 id="h1">The Lost City</h1>
+                <div id="list">
+
+                    <ul>
+                        <li class="list1" id="list1">Hd 2022</li>
+                        <li class="list1">Min 120</li>
+                    </ul>
+
+                </div>
+            </div>
+        </li>
+        <li class="contain" id="contain">
+            <div class="con" id="bo2">
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
+                        src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
+                        alt="This is an image"></a>
+
+                <h1 id="h1">The Lost City</h1>
+                <div id="list">
+
+                    <ul>
+                        <li class="list1" id="list1">Hd 2022</li>
+                        <li class="list1">Min 120</li>
+                    </ul>
+
+                </div>
+            </div>
+        </li>
+        <li class="contain" id="contain">
+            <div class="con" id="bo2">
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -275,7 +476,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -292,7 +493,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -309,7 +510,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -326,7 +527,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -343,7 +544,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -360,24 +561,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
-                        src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
-                        alt="This is an image"></a>
-
-                <h1 id="h1">The Lost City</h1>
-                <div id="list">
-
-                    <ul>
-                        <li class="list1" id="list1">Hd 2022</li>
-                        <li class="list1">Min 120</li>
-                    </ul>
-
-                </div>
-            </div>
-        </li>
-        <li class="contain" id="contain" >
-            <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -394,7 +578,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -411,7 +595,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -428,7 +612,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -445,7 +629,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -462,7 +646,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -479,7 +663,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -496,7 +680,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -513,7 +697,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -530,92 +714,7 @@
         </li>
         <li class="contain" id="contain">
             <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
-                        src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
-                        alt="This is an image"></a>
-
-                <h1 id="h1">The Lost City</h1>
-                <div id="list">
-
-                    <ul>
-                        <li class="list1" id="list1">Hd 2022</li>
-                        <li class="list1">Min 120</li>
-                    </ul>
-
-                </div>
-            </div>
-        </li>
-        <li class="contain" id="contain">
-            <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
-                        src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
-                        alt="This is an image"></a>
-
-                <h1 id="h1">The Lost City</h1>
-                <div id="list">
-
-                    <ul>
-                        <li class="list1" id="list1">Hd 2022</li>
-                        <li class="list1">Min 120</li>
-                    </ul>
-
-                </div>
-            </div>
-        </li>
-        <li class="contain" id="contain">
-            <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
-                        src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
-                        alt="This is an image"></a>
-
-                <h1 id="h1">The Lost City</h1>
-                <div id="list">
-
-                    <ul>
-                        <li class="list1" id="list1">Hd 2022</li>
-                        <li class="list1">Min 120</li>
-                    </ul>
-
-                </div>
-            </div>
-        </li>
-        <li class="contain" id="contain">
-            <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
-                        src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
-                        alt="This is an image"></a>
-
-                <h1 id="h1">The Lost City</h1>
-                <div id="list">
-
-                    <ul>
-                        <li class="list1" id="list1">Hd 2022</li>
-                        <li class="list1">Min 120</li>
-                    </ul>
-
-                </div>
-            </div>
-        </li>
-        <li class="contain" id="contain">
-            <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
-                        src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
-                        alt="This is an image"></a>
-
-                <h1 id="h1">The Lost City</h1>
-                <div id="list">
-
-                    <ul>
-                        <li class="list1" id="list1">Hd 2022</li>
-                        <li class="list1">Min 120</li>
-                    </ul>
-
-                </div>
-            </div>
-        </li>
-        <li class="contain" id="contain">
-            <div class="con" id="bo2">
-                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img
+                <a href="movies1.html" onclick="window.open('movies1.html', '_self')"><img class="yoyo"
                         src="https://media.discordapp.net/attachments/1030728998772289609/1032635734584217630/new.6.png"
                         alt="This is an image"></a>
 
@@ -639,7 +738,23 @@
             <p>Copyright &copy;www.zoro.net. All rights reserved!</p>
         </div>
     </footer>
+    <script>
+        burger = document.querySelector('.burger');
+        navber = document.querySelector('.navber');
+        navList = document.querySelector('.nav-list');
+        search = document.querySelector('.search')
+        
 
+
+        burger.addEventListener('click',()=>{
+            search.classList.toggle('v-nav');
+            navList.classList.toggle('v-nav');
+            navber.classList.toggle('h-nav');
+        })
+       
+
+
+    </script>
 
 
 
